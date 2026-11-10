@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>配列の利用</title>
+<style> 
+body {
+           font-family: sans-serif;
+       }
+       h2 {
+           font-size: 24px;
+       }
+       table {
+           border-collapse: collapse;
+           text-align: center;
+       }
+       th {
+           background-color: #ffcc99;
+           border: 1px solid black;
+           padding: 10px;
+       }
+       td {
+           border: 1px solid black;
+           padding: 10px;
+       }
+       td:first-child {
+           background-color: #ffcc99;
+           font-weight: bold;
+       }
+       button {
+           cursor: pointer;
+       }</style>
+</head>
+<body>
+<h2>利用料の計算</h2>
+
+<table>
+
+<tr>
+<th>No.</th>
+<th>料金(a)</th>
+<th>人数(b)</th>
+<th>a x b</th>
+</tr>
+
+<tr>
+<td>0</td>
+<td>500</td>
+<td>10</td>
+<td>
+<button onclick="multiply(0)">利用料の合計</button>
+</td>
+</tr>
+
+<tr>
+<td>1</td>
+<td>980</td>
+<td>16</td>
+<td>
+<button onclick="multiply(1)">利用料の合計</button>
+</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>1200</td>
+<td>8</td>
+<td>
+<button onclick="multiply(2)">利用料の合計</button>
+</td>
+</tr>
+
+</table>
+
+<script>
+       let a = [500, 980, 1200];
+       let b = [10, 16, 8];
+       function multiply(i) {
+           let goukei = a[i] * b[i];
+           alert("料金は" + goukei + "円です");
+       }
+</script>
+
+</body>
+</html>
+    </head>
+   
+
+</html>
