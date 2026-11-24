@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>挨拶</title>
+</head>
+<body>
+
+    <h1>挨拶</h1>
+    <p id="message"></p>
+
+    <script>
+        function greetings() {
+
+            const today = new Date();
+            const hour = today.getHours();
+
+            if (hour >= 5 && hour < 9)
+                return "おはようございます";
+
+            else if (hour < 18)
+                return "こんにちは";
+
+            else
+                return "こんばんは";
+        }
+
+        document.getElementById("message").textContent = greetings();
+
+    </script>
+
+</body>
+</html>
