@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>要素の追加と削除</title>
+
+    <style>
+        #photo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        #photo img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>写真の一覧</h1>
+
+    <p>以下のボタンをクリックすると、写真が一覧表示されます。</p>
+
+    <button onclick="showPhoto()">写真を表示</button>
+
+    <div id="photo"></div>
+
+    <script>
+        function showPhoto() {
+
+            let photos = [
+                "img/photo_1.jpg",
+                "img/photo_2.jpg",
+                "img/photo_3.jpg",
+                "img/photo_4.jpg",
+                "img/photo_5.jpg",
+                "img/photo_6.jpg",
+                "img/photo_7.jpg",
+                "img/photo_8.jpg"
+            ];
+
+            let html = "";
+
+            photos.forEach(function(photo) {
+                html += '<img src="' + photo + '">';
+            });
+
+            document.querySelector("#photo").innerHTML = html;
+
+            
+        }
+    </script>
+
+</body>
+</html>
