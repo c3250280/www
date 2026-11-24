@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>複数の要素の取得</title>
+    </head>
+    <body>
+        <h1>人口の多い国ランキング</h1>
+        <ol id=country>
+            <li>中国</li>
+            <li>インド</li>
+            <li>アメリカ</li>
+            <li>インドネシア</li>
+        </ol>
+        <button onclick="get_li()">国旗を表示</button>
+
+        <script>
+            function get_li(){
+                let country= document.querySelectorAll("li");
+
+                let flags = [
+    "images/flag_CHN.png",
+    "images/flag_IDN.png",
+    "images/flag_IND.png",
+    "images/flag_USA.png"
+];
+
+country.forEach(function(country, index) {
+    country.innerHTML = '<img src="' + flags[index] + '" width="65">';
+});
+
+            }
+        </script>
+    </body>
+
+</html>
