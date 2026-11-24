@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>確認ダイアログ</title>
+</head>
+<body>
+    <h1>選択の確認</h1>
+    <button onclick = "start()">選択</button>
+
+<script>
+    function ask(question,yes,no){
+        if (confirm(question)){
+            yes();
+        }else{
+            no();
+        }
+
+    }
+
+    function start() {
+        ask(
+            "次の操作を始めてもいい？",
+            function(){
+                alert("移動する！")
+            },
+            function(){
+                alert("このページに留まる")
+            }
+        );
+
+    }
+</script>
+</body>
+</html>
